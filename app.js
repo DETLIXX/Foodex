@@ -6,17 +6,18 @@ const app = express();
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
-app.use(express.json)
 
-//Clean Router
-const route = require("./")
-app.use(route);
+// //Clean Router
+// const route = require("./")
+// app.use(route);
 
 
 app.get('/', (req, res) => {
+    res.render("index")
 
 });
-app.get('/', (req, res) => {
+
+app.post('/', (req, res) => {
 
 });
 
