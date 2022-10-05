@@ -1,0 +1,44 @@
+:root { 
+  --cGrey: #2C2C2C;
+  --cOrange: #FFB627;
+  --cRed: #EF4646;
+  --cWhite: #dadada;
+  --cBackground: #F0F0F0;
+}
+
+* { 
+  color: var(--cGrey);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  margin: 0;
+  padding: 0;
+  color: var(--cGrey);
+}
+
+
+body {
+  margin: 0;
+  background-color: var(--cBackground);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+
+.canClick { 
+  cursor: pointer;
+}
+
+/* :hover { 
+  border: 0.1px solid rgb(255, 0, 0);
+  
+} */
+
+

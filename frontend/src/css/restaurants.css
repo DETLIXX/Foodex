@@ -1,0 +1,182 @@
+#restaurants { 
+    background-color: var(--cGrey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.restaurants-title { 
+    width: 85%;
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.restaurants-title h1 {
+    color: var(--cOrange);
+}
+.restaurants-title p {
+    color: white;
+    font-size: 10px;
+    margin: 0;
+}
+
+.restaurant-holder { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content:center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 3% 0;
+}
+
+
+
+/* Restaurant Card */
+
+.restaurant-card { 
+    width: 450px;
+    height: 270px;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+
+.restaurant-card-container { 
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.restaurant-card:hover { 
+    transform: scale(1.02) translateY(-10px);
+}
+
+
+.restaurant-title { 
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 3% 0 .5% 0;
+}
+
+
+.restaurant-title p { 
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.restaurant-title-content {
+    width: 100%;
+    margin: 0 15px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-title h2 { 
+    color: white;
+    min-width: 150px;
+}
+
+.restaurant-mid { 
+    height: 35%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1% 0 10% 0;
+}
+.restaurant-hours-content { 
+    width: 40%;
+    height: 40%;
+    margin: 0 10px;
+    border-radius: 15px;
+    background-color: var(--cGrey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.restaurant-hours-content p { 
+    color: white;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.restaurant-bottom { 
+    width: 100%;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+}
+
+.restaurant-bottom-content { 
+    width: 50%;
+    background-color: green;
+}
+
+.open strong { 
+    color: rgb(153, 255, 0);
+}
+
+.closed strong { 
+    color: red;
+}
+
+
+.isClosed { 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.713);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.isClosed h2 { 
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.isClosed i { 
+    color: white;
+}
+
+.restaurant-card-background { 
+    position: absolute;
+    opacity: 50%;
+    filter: blur(3px);
+}

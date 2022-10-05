@@ -1,0 +1,72 @@
+import React, { useState, useRef, useEffect } from 'react'
+import { v4 as uuidv4 } from 'uuid';
+import CreateToDo from './createTodo.jsx'
+import '../css/TodoMain.css'
+
+const LOCAL_STORAGE = "local.storage.key"
+
+export default function ToDo() {
+  // (todo = Get everything from array) (setTodos = Add new item into array)
+  const [getTodos, setTodos] = useState([]) 
+  
+  // Referencing input
+  const todoInput = useRef();
+
+  // (ONCE ON START) Load todos from local storage
+  useEffect(() => { 
+    const storeLocal = JSON.parse(localStorage.getItem(LOCAL_STORAGE));
+    if(storeLocal) {setTodos(storeLocal)}
+
+  }, [])
+
+  // (WHEN ADDED INTO TODO) Store new todo into local storage
+  useEffect(() => { 
+      localStorage.setItem(LOCAL_STORAGE, JSON.stringify(getTodos))
+  }, [getTodos])
+
+  // Toggle ON/OFF checkboxes
+  function toggleTodo(id) { 
+    // Copying todo array into new Variable
+    const newTodos = [...getTodos]
+    console.log(newTodos);
+    // Find checkboc that have same id as we passed
+    const todo = newTodos.find(todo => todo.id === id)
+    // Switch ON/OFF
+    todo.complete = !todo.complete;
+    setTodos(newTodos);
+  }
+
+  // Button for Add new item into TODO
+  function addToDo(e) { 
+    const inputValue = todoInput.current.value;
+    if(inputValue === "") return;
+    console.log(inputValue);
+
+    // Add new item into TODO
+    setTodos(prevTodo => { 
+      console.log(prevTodo);
+      return [...prevTodo, {
+        id: uuidv4(),
+        name:inputValue, 
+        complete: false
+      }]
+    })
+    todoInput.current.value = null;
+  }
+
+  // Return HTML
+  return (
+    <div className='todos-section'>
+      <div className='tasks'>
+        {getTodos.map(todos => { 
+          return <CreateToDo key={todos.id} toggleTodo={toggleTodo} todos={todos}/>
+        })}
+      </div>
+
+      <input ref={todoInput} type="text" />
+      <button onClick={addToDo}>Add ToDo</button>
+      <button>Clear ToDo</button>
+      <p>{getTodos.length} todo left</p>
+    </div>
+  )
+}

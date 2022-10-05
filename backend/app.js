@@ -7,9 +7,8 @@ const app = express();
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-// //Clean Router
-// const route = require("./")
-// app.use(route);
+const route = require("./routes/location.js")
+app.use("/api", route);
 
 
 app.get('/', (req, res) => {
@@ -21,6 +20,6 @@ app.post('/', (req, res) => {
 
 });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log(`App listening on port!`);
 });

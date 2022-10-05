@@ -1,0 +1,19 @@
+import React from 'react'
+import '../css/StoredTodos.css'
+
+
+export default function CreateToDo({ todos, toggleTodo }) {
+
+  function handleTodoCheckbox() { 
+    toggleTodo(todos.id)
+  }
+
+  return (
+      <div key={todos.id} className='taskDiv'>
+        <label>
+          <input checked={todos.complete} onChange={handleTodoCheckbox} type="checkbox" />
+          <p>{todos.name}</p>
+        </label>
+      </div>
+  )
+}

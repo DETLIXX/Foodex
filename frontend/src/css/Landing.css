@@ -1,0 +1,126 @@
+@media screen and (max-width: 900) {
+
+    #landing .landing-container .landing-right img { 
+        visibility:hidden;
+    }
+}
+
+
+
+#landing { 
+    padding: 5% 0;
+    width: 100vw;
+}
+
+strong { 
+    color: var(--cOrange);
+}
+
+#landing .landing-container { 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.landing-content { 
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.available-delivery { 
+    width: 70%;
+    height: 40px;
+    display: flex;
+    justify-self: left;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.delivery { 
+    width: 200px;
+    border-radius: 20px;
+    border: 0;
+    background-color: var(--cWhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.delivery i { 
+    color: var(--cRed);
+}
+
+.available-delivery .delivery h4 { 
+    font-size: 0.9rem;
+    color: var(--cRed);
+}
+
+.landing-left h1 { 
+    font-size: 3.5rem;
+    width: 70%;
+}
+
+.landing-left h4 { 
+    font-size: 15px;
+    width: 70%;
+    text-align: left;
+}
+
+.landing-right img { 
+    width: 65%;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.landing-bottom { 
+    margin: 20px 0;
+    width: 70%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.landing-bottom button { 
+    margin: 0 15px 0 0;
+    transition: 1s;
+}
+
+.landing-bottom button:hover { 
+    transform: scale(1.1);
+}
+
+.place-order { 
+    background-color: var(--cGrey);
+    color: var(--cWhite);
+    height: 100%;
+    width: 150px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.track-order { 
+    background-color: var(--cGrey);
+    color: var(--cWhite);
+    height: 100%;
+    width: 50px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.track-order i { 
+    color: var(--cOrange);
+}
+    
