@@ -10,16 +10,6 @@ app.set('view engine', 'ejs');
 const route = require("./routes/location.js")
 app.use("/api", route);
 
-
-app.get('/', (req, res) => {
-    res.render("index")
-
-});
-
-app.post('/', (req, res) => {
-
-});
-
 app.listen(process.env.PORT || 3001, () => {
     console.log(`App listening on port!`);
 });

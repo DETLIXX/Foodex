@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
  
 export default function CreateRestaurantCard( { data }) {
+
+  // TODO Create card array for RestaurantNear.jsx
+
+
   function IsClosed () {
     if(!data?.opening_hours?.open_now) { 
       return (

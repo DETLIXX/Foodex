@@ -6,6 +6,11 @@
     #header ul * { 
         display: none;
     }
+
+    #header { 
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
@@ -32,9 +37,10 @@ i:hover {
     justify-content: space-between;
     padding: 0 5%;
     flex-wrap: wrap;
-
-    background-color: white;
-
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    background-color: var(--cGreyWhite);
 }
 
 #header img { 

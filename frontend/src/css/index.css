@@ -4,6 +4,8 @@
   --cRed: #EF4646;
   --cWhite: #dadada;
   --cBackground: #F0F0F0;
+  --cGreyWhite: #E6E6E6;
+  --cNeonGreen:#99ff00;
 }
 
 * { 
@@ -21,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   margin: 0;
   background-color: var(--cBackground);
+  overflow-x: hidden;
 }
 
 .noselect {
